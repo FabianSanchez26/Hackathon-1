@@ -1,4 +1,5 @@
-package com.hackathon;
+package com.tuckersoft.branchengine;
+
 package com.hackathon;
 
 import org.junit.jupiter.api.BeforeEach;
