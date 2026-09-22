@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.Instant;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "story_nodes")
@@ -40,6 +42,9 @@ public class StoryNode {
 
     @Column(length = 40)
     private String glitchBranchCode;
+
+    @OneToMany(mappedBy = "currentNode")
+    private List<Playthrough> playthroughs = new ArrayList<>();
 
     @Column(nullable = false)
     private Instant createdAt;
